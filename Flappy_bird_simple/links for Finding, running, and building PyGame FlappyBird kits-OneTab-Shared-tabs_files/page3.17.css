@@ -1,0 +1,173 @@
+/* Copyright 2024 OneTab Ltd.  All rights reserved. */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --link-color: #234da7;
+    --link-color-background: #f1f4f9;
+    --text-color: #444;
+    --text-color-weak: #6a6a6a;
+    --text-color-em: #333;
+    --bg-color: #fff;
+    --border-color: #eee;
+    --dash-color: #ddd;
+    --button-inner-border-color: #ababab;
+    --button-inner-border-color-hover: #888;
+    --button-hover-background: linear-gradient(90deg, #fff 0%, rgba(246,253,255,0.3) 100%);
+    --stronger-border-color: #dbdbdb;
+    --warning-text-color: #d93025;
+    --text-highlight-bg-color: #FFFF00;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --link-color: #8AB4F8;
+    --link-color-background: #242e40;
+    --text-color: #E8EAED;
+    --text-color-weak: #a9aaad;
+    --text-color-em: #fff;
+    --bg-color: #2b2b2e;
+    --border-color: #545454;
+    --dash-color: #60666b;
+    --button-inner-border-color: #ababab;
+    --button-inner-border-color-hover: #ccc;
+    --button-hover-background: linear-gradient(90deg, #27272a 0%, rgba(246,253,255,0.05) 100%);
+    --stronger-border-color: #777777;
+    --warning-text-color: #f28b82;
+    --text-highlight-bg-color: #4a32ff;
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  font-size:14px;
+}
+
+a {
+  color: var(--link-color);
+}
+
+.button-outer {
+  display: inline-block;
+  font-size: 0;
+  padding: 2px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+.button-outer:hover {
+  border: 1px solid var(--border-color);
+}
+.button-default-outer {
+  border: 1px solid var(--border-color);
+}
+.button-outer .button {
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-width: 36px;
+  vertical-align: middle;
+  white-space: no-wrap;
+  width: auto;
+  font-weight: 600;
+  box-sizing: border-box;
+  text-align: center;
+  word-break: break-word;
+  transition: box-shadow .1s;
+
+  display: inline-block;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 6px 18px;
+  border-radius: 8px;
+  box-shadow: 0 0 2px var(--bg-color);
+  background-color: var(--bg-color);
+}
+.button-default-outer .button {
+  border:1px solid var(--button-inner-border-color);
+}
+.button-default-outer .button:hover {
+  border:1px solid var(--button-inner-border-color-hover);
+}
+.button-hover-bg-change:hover {
+  background: var(--button-hover-background);
+}
+
+input, select, textarea, button {
+  font-family:inherit;
+  outline: none;
+  border: none;
+}
+input, select, textarea  {
+  border-radius: 4px;
+  padding: 6px 10px;
+}
+input, select, textarea {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+}
+input[type=text] {
+  padding: 4px 4px;
+  border-radius: 3px;
+  outline: none;
+  -webkit-appearance: textfield;
+}
+input:focus, select:focus, textarea:focus {
+  border: 1px solid var(--link-color);
+}
+
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --page-bg-color: #ffffff;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-bg-color: #35363A;
+  }
+}
+
+body {
+  background-color: var(--page-bg-color);
+}
+
+.tabLink {
+  white-space: normal;
+  word-break: break-word;
+  vertical-align: middle;
+  padding-left: 10px;
+  padding-right: 12px;
+  text-decoration: none;
+}
+
+.tabGroupLabel {
+  padding-top:10px;
+  padding-bottom:0;
+  color: var(--text-color);
+  font-size:26px;
+  font-weight:300
+}
+
+.tab {
+  white-space: nowrap;
+  padding-top: 8px;
+  position: relative;
+  font-size: 13px;
+}
+
+.tabGroup {
+  padding-left:24px;
+  padding-bottom:19px;
+}
+
+.favIconImg {
+  vertical-align: middle;
+  width:16px;
+  height:16px
+}
